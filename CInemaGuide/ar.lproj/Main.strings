@@ -1,0 +1,64 @@
+
+/* Class = "UILabel"; text = "Cinema"; ObjectID = "0mN-EW-RWV"; */
+"0mN-EW-RWV.text" = "سينما";
+
+/* Class = "UITabBarItem"; title = "Cinemas"; ObjectID = "49L-Rq-rlY"; */
+"49L-Rq-rlY.title" = "السينمات";
+
+/* Class = "UITabBarItem"; title = "Movies"; ObjectID = "8JX-Ji-6Yg"; */
+"8JX-Ji-6Yg.title" = "الافلام";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "Btv-JY-vge"; */
+"Btv-JY-vge.placeholder" = "ابحث فى الافلام";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "GnZ-cG-k9c"; */
+"GnZ-cG-k9c.title" = "الاعدادات";
+
+/* Class = "UILabel"; text = "Copyrights (c) 2017 sarmady.net. All rights reserved"; ObjectID = "H7t-Vf-rxs"; */
+"H7t-Vf-rxs.text" = "جميع الحقوق محفوظة لشركة سرمدى ٢٠١٧";
+
+/* Class = "UIButton"; normalTitle = "Details"; ObjectID = "IBK-Th-Qam"; */
+"IBK-Th-Qam.normalTitle" = "تفاصيل";
+
+/* Class = "UILabel"; text = "Application Language"; ObjectID = "KZ8-BR-fkb"; */
+"KZ8-BR-fkb.text" = "لغة التطبيق";
+
+/* Class = "UILabel"; text = "More Apps"; ObjectID = "WpL-9q-LC2"; */
+"WpL-9q-LC2.text" = "المزيد من التطبيقات";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "XW7-za-xDy"; */
+"XW7-za-xDy.text" = "الاعدادت";
+
+/* Class = "UILabel"; text = "Movie"; ObjectID = "XXy-ej-OMK"; */
+"XXy-ej-OMK.text" = "فيلم";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "fZR-Td-Qne"; */
+"fZR-Td-Qne.title" = "الرئيسية";
+
+/* Class = "UILabel"; text = "Enable Notifications"; ObjectID = "i5Q-HI-6aH"; */
+"i5Q-HI-6aH.text" = "تفعيل الاشعارات";
+
+/* Class = "UIButton"; normalTitle = "Playing at"; ObjectID = "mlq-nS-PBh"; */
+"mlq-nS-PBh.normalTitle" = "يعرض فى";
+
+/* Class = "UISegmentedControl"; opX-dY-kQL.segmentTitles[0] = "Now Playing"; ObjectID = "opX-dY-kQL"; */
+"opX-dY-kQL.segmentTitles[0]" = "يعرض الان";
+
+/* Class = "UISegmentedControl"; opX-dY-kQL.segmentTitles[1] = "Coming Soon"; ObjectID = "opX-dY-kQL"; */
+"opX-dY-kQL.segmentTitles[1]" = "قريبا";
+//"opX-dY-kQL.segmentTitles[1]" = "لاحقا";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "qZ5-Q2-pOy"; */
+"qZ5-Q2-pOy.title" = "المفضلة";
+
+/* Class = "UILabel"; text = "Favorite Cinemas"; ObjectID = "qbt-cG-ld7"; */
+"qbt-cG-ld7.text" = "السينمات المفضلة";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "u0b-K6-k3v"; */
+"u0b-K6-k3v.placeholder" = "ابحث فى السينمات";
+
+/* Class = "UILabel"; text = "Cinemas"; ObjectID = "woQ-K9-kmq"; */
+"woQ-K9-kmq.text" = "السينمات";
+
+/* Class = "UILabel"; text = "Version"; ObjectID = "zs8-zE-JrK"; */
+"zs8-zE-JrK.text" = "نسخة التطبيق";

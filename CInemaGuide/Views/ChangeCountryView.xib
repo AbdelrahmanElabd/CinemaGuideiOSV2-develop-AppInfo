@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="segoeuib.ttf">
+            <string>SegoeUI-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChangeCountryView" customModule="CInemaGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUy-jC-B5N">
+                    <rect key="frame" x="8" y="614" width="174.5" height="45"/>
+                    <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="rFn-ls-T2y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
+                    <state key="normal" title="Ok">
+                        <color key="titleColor" red="0.090196078431372548" green="0.13725490200000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="okButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="CM3-Q9-V5D"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dc-Vt-zBJ">
+                    <rect key="frame" x="192.5" y="614" width="174.5" height="45"/>
+                    <color key="backgroundColor" red="0.64313725490196072" green="0.65490196079999996" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="vL3-h3-YZv"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GSR-vD-YAV">
+                    <rect key="frame" x="8" y="8" width="359" height="598"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="5Hc-w6-6Uy"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="YM7-h2-OAM"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iUy-jC-B5N" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.465" id="5sv-0B-lDm"/>
+                <constraint firstItem="iUy-jC-B5N" firstAttribute="top" secondItem="GSR-vD-YAV" secondAttribute="bottom" constant="8" id="67d-sM-sDh"/>
+                <constraint firstItem="1dc-Vt-zBJ" firstAttribute="width" secondItem="iUy-jC-B5N" secondAttribute="width" id="6on-ep-Mxy"/>
+                <constraint firstItem="GSR-vD-YAV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Akm-7D-pxz"/>
+                <constraint firstItem="iUy-jC-B5N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="E2P-ie-esE"/>
+                <constraint firstAttribute="bottom" secondItem="iUy-jC-B5N" secondAttribute="bottom" constant="8" id="Nmx-4k-3CC"/>
+                <constraint firstItem="1dc-Vt-zBJ" firstAttribute="height" secondItem="iUy-jC-B5N" secondAttribute="height" id="UHk-Gz-PZ6"/>
+                <constraint firstItem="GSR-vD-YAV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="hOv-wv-7gm"/>
+                <constraint firstAttribute="trailing" secondItem="1dc-Vt-zBJ" secondAttribute="trailing" constant="8" id="wSz-eh-QsF"/>
+                <constraint firstAttribute="bottom" secondItem="1dc-Vt-zBJ" secondAttribute="bottom" constant="8" id="xK1-lv-WFB"/>
+                <constraint firstAttribute="trailing" secondItem="GSR-vD-YAV" secondAttribute="trailing" constant="8" id="ykq-nD-Uwm"/>
+            </constraints>
+            <connections>
+                <outlet property="cancelButton" destination="1dc-Vt-zBJ" id="AsC-D8-0rk"/>
+                <outlet property="countriesTableView" destination="GSR-vD-YAV" id="obn-xQ-Jqw"/>
+                <outlet property="okButton" destination="iUy-jC-B5N" id="2B3-2p-Eb6"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="123"/>
+        </view>
+    </objects>
+</document>

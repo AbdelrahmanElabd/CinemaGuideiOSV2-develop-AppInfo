@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="galleryImageCollectionCell" id="gTV-IL-0wX" customClass="MovieDetailsImagesCollectionViewCell" customModule="CInemaGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="115" height="114"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v7K-cG-vY8">
+                        <rect key="frame" x="8" y="8" width="99" height="98"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="v7K-cG-vY8" secondAttribute="bottom" constant="8" id="4rS-SZ-bpM"/>
+                <constraint firstItem="v7K-cG-vY8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="BDZ-8j-DOh"/>
+                <constraint firstItem="v7K-cG-vY8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="HmN-OQ-RLU"/>
+                <constraint firstAttribute="trailing" secondItem="v7K-cG-vY8" secondAttribute="trailing" constant="8" id="T8s-iF-fnB"/>
+            </constraints>
+            <size key="customSize" width="115" height="114"/>
+            <connections>
+                <outlet property="movieImageView" destination="v7K-cG-vY8" id="bm2-ic-g34"/>
+            </connections>
+            <point key="canvasLocation" x="66.5" y="86"/>
+        </collectionViewCell>
+    </objects>
+</document>

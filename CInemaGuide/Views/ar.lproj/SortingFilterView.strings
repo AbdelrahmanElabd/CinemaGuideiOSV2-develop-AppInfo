@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "5wa-LR-utg"; */
+"5wa-LR-utg.normalTitle" = "موافق";
+
+/* Class = "UIButton"; normalTitle = "Rating"; ObjectID = "UHp-ea-hQp"; */
+"UHp-ea-hQp.normalTitle" = "الافضل";
+
+/* Class = "UIButton"; normalTitle = "Release Date"; ObjectID = "hWX-xX-eCQ"; */
+"hWX-xX-eCQ.normalTitle" = "تاريخ العرض";
+
+/* Class = "UIButton"; normalTitle = "AZ"; ObjectID = "rco-nN-VCF"; */
+"rco-nN-VCF.normalTitle" = "ابجدى";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "s3o-IG-wbh"; */
+"s3o-IG-wbh.normalTitle" = "الغاء";

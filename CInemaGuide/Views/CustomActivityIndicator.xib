@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" id="iN0-l3-epB" customClass="CustomActivityIndicator" customModule="CInemaGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ActivityIndicatorRedDotIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gBa-gE-sFV">
+                    <rect key="frame" x="193" y="321" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="HR0-AT-X62"/>
+                        <constraint firstAttribute="width" constant="16" id="KlL-hl-8dU"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ActivityIndicatorCinemaIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cod-cd-PK7">
+                    <rect key="frame" x="162" y="308" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="EFe-ht-zLx"/>
+                        <constraint firstAttribute="width" constant="50" id="gIa-V7-LIL"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="cod-cd-PK7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ABv-UC-oyn"/>
+                <constraint firstItem="cod-cd-PK7" firstAttribute="top" secondItem="gBa-gE-sFV" secondAttribute="bottom" constant="-29" id="Nxd-4e-J33"/>
+                <constraint firstItem="cod-cd-PK7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="WaS-oL-gTn"/>
+                <constraint firstItem="gBa-gE-sFV" firstAttribute="leading" secondItem="cod-cd-PK7" secondAttribute="trailing" constant="-19" id="psb-lk-1oM"/>
+            </constraints>
+            <connections>
+                <outlet property="activityIndicatorCinemaImage" destination="cod-cd-PK7" id="sjS-sa-bzh"/>
+                <outlet property="activityIndicatorRedDotIcon" destination="gBa-gE-sFV" id="IOh-1C-k4t"/>
+                <outlet property="redDotIconHorizontalSpaceConstraint" destination="psb-lk-1oM" id="DB4-Bb-dR4"/>
+                <outlet property="redDotIconVerticalSpaceConstraint" destination="Nxd-4e-J33" id="nMg-iJ-SR9"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ActivityIndicatorCinemaIcon" width="82" height="82"/>
+        <image name="ActivityIndicatorRedDotIcon" width="23" height="23"/>
+    </resources>
+</document>

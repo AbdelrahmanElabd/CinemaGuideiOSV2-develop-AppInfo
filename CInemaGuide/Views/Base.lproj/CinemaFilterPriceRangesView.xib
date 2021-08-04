@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="segoeuib.ttf">
+            <string>SegoeUI-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CinemaFilterPriceRangesView" customModule="CInemaGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGN-cP-agI">
+                    <rect key="frame" x="8" y="614" width="174.5" height="45"/>
+                    <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="2wM-h0-Wsn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
+                    <state key="normal" title="Ok">
+                        <color key="titleColor" red="0.090196078430000007" green="0.13725490200000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="okButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="iVL-tK-9A4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayv-4N-mtA">
+                    <rect key="frame" x="192.5" y="614" width="174.5" height="45"/>
+                    <color key="backgroundColor" red="0.64313725489999995" green="0.65490196079999996" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="wkf-cl-iLi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
+                    <state key="normal" title="Cancel"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cancelButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="rdl-0l-6aN"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rWC-XT-44E">
+                    <rect key="frame" x="8" y="8" width="359" height="598"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="h8T-2D-2aK"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="nwa-Aj-vfu"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rWC-XT-44E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="77P-jJ-R0x"/>
+                <constraint firstAttribute="trailing" secondItem="rWC-XT-44E" secondAttribute="trailing" constant="8" id="Bec-Sb-zMa"/>
+                <constraint firstItem="rWC-XT-44E" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="DMv-SW-iMl"/>
+                <constraint firstAttribute="bottom" secondItem="tGN-cP-agI" secondAttribute="bottom" constant="8" id="IeK-Qb-x6t"/>
+                <constraint firstItem="tGN-cP-agI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="JOa-aV-9j1"/>
+                <constraint firstItem="ayv-4N-mtA" firstAttribute="top" secondItem="rWC-XT-44E" secondAttribute="bottom" constant="8" id="Peo-qo-iHI"/>
+                <constraint firstAttribute="trailing" secondItem="ayv-4N-mtA" secondAttribute="trailing" constant="8" id="X86-pX-aFJ"/>
+                <constraint firstItem="tGN-cP-agI" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.465" id="cGh-Go-ZlD"/>
+                <constraint firstAttribute="bottom" secondItem="ayv-4N-mtA" secondAttribute="bottom" constant="8" id="fAl-5F-PrN"/>
+                <constraint firstItem="ayv-4N-mtA" firstAttribute="width" secondItem="tGN-cP-agI" secondAttribute="width" id="jCl-vv-xCz"/>
+            </constraints>
+            <connections>
+                <outlet property="cancelButton" destination="ayv-4N-mtA" id="95Z-vw-g0y"/>
+                <outlet property="okButton" destination="tGN-cP-agI" id="NhU-xq-ZZH"/>
+                <outlet property="priceRangesTableView" destination="rWC-XT-44E" id="vSh-q9-tXS"/>
+            </connections>
+            <point key="canvasLocation" x="47" y="149"/>
+        </view>
+    </objects>
+</document>

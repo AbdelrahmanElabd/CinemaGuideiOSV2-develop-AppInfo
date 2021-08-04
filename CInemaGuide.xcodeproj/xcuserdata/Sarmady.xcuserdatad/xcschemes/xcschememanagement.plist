@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CInemaGuide.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>39</integer>
+		</dict>
+		<key>CinemaGuideNotificationsService.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>40</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>080B213B1EE57F6D007AC70A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>080B21511EE57F6E007AC70A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>080B215C1EE57F6E007AC70A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>540A61171FFD22980097ECB6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

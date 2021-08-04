@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="segoeuib.ttf">
+            <string>SegoeUI-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PGsFilterView" customModule="CInemaGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4O-mB-YEX">
+                    <rect key="frame" x="8" y="614" width="174.5" height="45"/>
+                    <color key="backgroundColor" red="1" green="0.7725490196" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="9HK-Sx-an6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
+                    <state key="normal" title="Ok"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="okButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Z0s-KQ-QVu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW2-Zt-7HO">
+                    <rect key="frame" x="192.5" y="614" width="174.5" height="45"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="MNY-10-XKz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
+                    <state key="normal" title="Cancel"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cancelButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="6Qy-ED-gVa"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qkd-uO-9tT">
+                    <rect key="frame" x="8" y="8" width="359" height="598"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="997-A3-VVF"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="vjd-vD-Jm8"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="UW2-Zt-7HO" firstAttribute="width" secondItem="E4O-mB-YEX" secondAttribute="width" id="3Dn-Hg-Ekt"/>
+                <constraint firstItem="E4O-mB-YEX" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.465" id="5L6-Vk-BCR"/>
+                <constraint firstItem="UW2-Zt-7HO" firstAttribute="top" secondItem="Qkd-uO-9tT" secondAttribute="bottom" constant="8" id="ARm-i6-bNe"/>
+                <constraint firstItem="Qkd-uO-9tT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="CKI-Yv-Nlq"/>
+                <constraint firstAttribute="bottom" secondItem="E4O-mB-YEX" secondAttribute="bottom" constant="8" id="IhQ-s0-mJK"/>
+                <constraint firstAttribute="trailing" secondItem="Qkd-uO-9tT" secondAttribute="trailing" constant="8" id="Qbt-BF-gip"/>
+                <constraint firstItem="E4O-mB-YEX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Y8E-Ea-ESk"/>
+                <constraint firstAttribute="trailing" secondItem="UW2-Zt-7HO" secondAttribute="trailing" constant="8" id="eq7-U0-Piu"/>
+                <constraint firstAttribute="bottom" secondItem="UW2-Zt-7HO" secondAttribute="bottom" constant="8" id="iqP-9B-x1u"/>
+                <constraint firstItem="Qkd-uO-9tT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="udQ-ML-dN1"/>
+            </constraints>
+            <connections>
+                <outlet property="cancelButton" destination="UW2-Zt-7HO" id="27c-aT-Hxm"/>
+                <outlet property="okButton" destination="E4O-mB-YEX" id="cCC-YZ-DIE"/>
+                <outlet property="pgsTableView" destination="Qkd-uO-9tT" id="Qll-fo-wIv"/>
+            </connections>
+        </view>
+    </objects>
+</document>

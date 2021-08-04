@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  CInemaGuide
+
+  Created by Hesham Haleem on 8/21/17.
+  Copyright © 2017 HeshamHaleem. All rights reserved.
+*/
+"all" = "All";
+"LE" = "LE";
+"SAR" = "SAR" ;
+"English" =  "English";
+"arabic" = "Arabic" ;
+"Cancel" = "Cancel";
+"OK" = "OK";
+"CHOOSE LANGUAGE" = "CHOOSE LANGUAGE" ;
+"adsarea" = "Ads Area" ;

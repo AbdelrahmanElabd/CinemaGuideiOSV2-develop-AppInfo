@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="segoeui.ttf">
+            <string>SegoeUI</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FiltersCell" id="gTV-IL-0wX" customClass="FiltersCollectionViewCell" customModule="CInemaGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="201" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="201" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AfO-7P-JSG">
+                        <rect key="frame" x="0.0" y="0.0" width="201" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxN-fV-6nR">
+                                <rect key="frame" x="16" y="25" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
+                                <color key="textColor" red="0.64313725490196072" green="0.65490196078431373" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowDownIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Zi7-69-uWZ">
+                                <rect key="frame" x="175" y="23" width="10" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="ci0-ZW-ugu"/>
+                                    <constraint firstAttribute="width" constant="10" id="uOr-8X-cei"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8901960784313725" green="0.88235294117647056" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yxN-fV-6nR" firstAttribute="leading" secondItem="AfO-7P-JSG" secondAttribute="leading" constant="16" id="73j-PX-pFG"/>
+                            <constraint firstItem="Zi7-69-uWZ" firstAttribute="centerY" secondItem="AfO-7P-JSG" secondAttribute="centerY" id="bFi-vo-nk4"/>
+                            <constraint firstItem="yxN-fV-6nR" firstAttribute="centerY" secondItem="AfO-7P-JSG" secondAttribute="centerY" id="ig0-Nc-WAw"/>
+                            <constraint firstAttribute="trailing" secondItem="Zi7-69-uWZ" secondAttribute="trailing" constant="16" id="ywX-xG-Gj0"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="AfO-7P-JSG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NEm-lP-OAd"/>
+                <constraint firstAttribute="trailing" secondItem="AfO-7P-JSG" secondAttribute="trailing" id="SVz-zZ-VdJ"/>
+                <constraint firstAttribute="bottom" secondItem="AfO-7P-JSG" secondAttribute="bottom" id="eJa-go-4Nt"/>
+                <constraint firstItem="AfO-7P-JSG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rFd-GK-hhT"/>
+            </constraints>
+            <size key="customSize" width="201" height="50"/>
+            <connections>
+                <outlet property="arrowDownImage" destination="Zi7-69-uWZ" id="isf-LR-qKM"/>
+                <outlet property="containerView" destination="AfO-7P-JSG" id="dRj-bi-Shh"/>
+                <outlet property="filterLabel" destination="yxN-fV-6nR" id="LkU-JN-6FW"/>
+            </connections>
+            <point key="canvasLocation" x="-41.5" y="54"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ArrowDownIcon" width="9" height="4"/>
+    </resources>
+</document>

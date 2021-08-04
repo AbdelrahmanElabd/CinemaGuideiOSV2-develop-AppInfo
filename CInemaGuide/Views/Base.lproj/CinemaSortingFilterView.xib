@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="segoeuib.ttf">
+            <string>SegoeUI-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CinemaSortingFilterView" customModule="CInemaGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIi-Z9-4AU">
+                    <rect key="frame" x="8" y="8" width="359" height="45"/>
+                    <color key="backgroundColor" red="0.89019607840000003" green="0.88235294119999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="TO2-NZ-g0E"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="16"/>
+                    <state key="normal" title="Az">
+                        <color key="titleColor" red="0.64313725489999995" green="0.65490196079999996" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="azButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="xla-Vo-3EY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdS-oS-Lyb">
+                    <rect key="frame" x="8" y="61" width="359" height="45"/>
+                    <color key="backgroundColor" red="0.090196078430000007" green="0.13725490200000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Fz5-3Y-xyM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="16"/>
+                    <state key="normal" title="Near By">
+                        <color key="titleColor" red="1" green="0.72941176470000002" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="nearByButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="hfm-OJ-Whc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wp-qo-inr">
+                    <rect key="frame" x="8" y="114" width="174.5" height="45"/>
+                    <color key="backgroundColor" red="1" green="0.72941176470000002" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="jC1-5U-QyN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
+                    <state key="normal" title="Ok">
+                        <color key="titleColor" red="0.090196078430000007" green="0.13725490200000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="okButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="oYY-yI-dFF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vm-oC-jpU">
+                    <rect key="frame" x="192.5" y="114" width="174.5" height="45"/>
+                    <color key="backgroundColor" red="0.64313725489999995" green="0.65490196079999996" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="yBJ-AI-DkD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="14"/>
+                    <state key="normal" title="Cancel"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cancelButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="pk4-Y1-Uq7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GdS-oS-Lyb" firstAttribute="top" secondItem="UIi-Z9-4AU" secondAttribute="bottom" constant="8" id="54u-Tn-3zg"/>
+                <constraint firstItem="2Vm-oC-jpU" firstAttribute="top" secondItem="GdS-oS-Lyb" secondAttribute="bottom" constant="8" id="5me-mP-Q4S"/>
+                <constraint firstItem="4Wp-qo-inr" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.465" id="Bxq-tI-Wc3"/>
+                <constraint firstItem="GdS-oS-Lyb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="HLA-ck-kJN"/>
+                <constraint firstAttribute="trailing" secondItem="GdS-oS-Lyb" secondAttribute="trailing" constant="8" id="KMa-sF-bma"/>
+                <constraint firstItem="4Wp-qo-inr" firstAttribute="top" secondItem="GdS-oS-Lyb" secondAttribute="bottom" constant="8" id="TBZ-2t-7Em"/>
+                <constraint firstItem="4Wp-qo-inr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="UKw-8T-kzA"/>
+                <constraint firstItem="2Vm-oC-jpU" firstAttribute="width" secondItem="4Wp-qo-inr" secondAttribute="width" id="Uc9-8L-0pJ"/>
+                <constraint firstItem="UIi-Z9-4AU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ZcQ-3i-MY8"/>
+                <constraint firstAttribute="trailing" secondItem="UIi-Z9-4AU" secondAttribute="trailing" constant="8" id="crm-5b-f9c"/>
+                <constraint firstAttribute="trailing" secondItem="2Vm-oC-jpU" secondAttribute="trailing" constant="8" id="i57-n5-4zK"/>
+                <constraint firstItem="UIi-Z9-4AU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="qsj-2j-Uf6"/>
+            </constraints>
+            <connections>
+                <outlet property="azButton" destination="UIi-Z9-4AU" id="c7T-c3-FmQ"/>
+                <outlet property="cancelButton" destination="2Vm-oC-jpU" id="S2K-5a-h9X"/>
+                <outlet property="nearByButton" destination="GdS-oS-Lyb" id="biV-mR-ytH"/>
+                <outlet property="okButton" destination="4Wp-qo-inr" id="B8U-6L-OFM"/>
+            </connections>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,171 @@
+/* 
+  Localizable.strings
+  CInemaGuide
+
+  Created by Hesham Haleem on 8/21/17.
+  Copyright © 2017 HeshamHaleem. All rights reserved.
+*/
+
+/*Featured Movies*/
+"Featured" = "الافلام المميزة";
+
+/*Now Playing Movies*/
+"Now Playing" = "يعرض الان";
+
+/*Nearby Cinemas Key*/
+"Nearby Cinemas" = "السينمات القريبة";
+
+/*Coming Soon Movies*/
+"Coming Soon" = "قريبا";
+//"Coming Soon" = "لاحقا";
+
+/*My Favorite Cinemas Key*/
+"My Favorite Cinemas" = "السينمات المفضلة";
+
+/*Enable Location Services*/
+"Please enable location services to get your nearby cinemas" = "برجاء تفعيل خدمات تحديد المواقع للحصول على السينمات القريبة";
+
+/*No Nearby Cinemas Key*/
+"No nearby cinemas" = "لا توجد سينمات قريبة";
+
+/*No Data Found*/
+//"No data found, please try again later" = "حدث خطأ فى الحصول على البيانات برجاء المحاولة لاحقا";
+"No data found, please try again later" = "لا يوجد بيانات برجاء المحاولة لاحقا";
+"No data found" = "لا يوجد بيانات";
+
+/*No Internet Connection*/
+"No internet connection, check your connection and try again" = "لا يوجد اتصال بالانترنت برجاء الاتصال بالانترنت و المحاولة لاحقا";
+
+/*Try Again*/
+"\n Try again" = "\n اعادة المحاولة";
+
+/*Sort by*/
+"Sort by:" = "ترتيب:";
+
+/*3D Key*/
+"3D" = "ثلاثى الابعاد";
+
+/*Genres Key*/
+"Genres" = "نوع";
+
+/*Language Key*/
+"Language" = "اللغة";
+"arabic" = "عربي" ;
+
+/*Price Range Key*/
+"Price Range" = "السعر";
+
+/*Add Favorite Cinema*/
+"You can add your favorite cinemas here" = "تستطيع اضافة السينمات المفضلة هنا";
+
+/*Movie Available Soon*/
+"This movie will be available soon in cinemas" = "الفيلم سوف يكون متاح فى السينمات لاحقا";
+
+/*Subtitle Key*/
+"Subtitle: " = "الترجمة: ";
+
+/*Links Key*/
+"Links" = "الروابط";
+
+/*Videos Key*/
+"Videos" = "الفيديوهات";
+
+/*Gallery Key*/
+"Gallery" = "الصور";
+
+/*Cancel Key*/
+"Cancel" = "الغاء";
+"OK" = "موافق";
+
+/*Arabic Key*/
+"Ar" = "عربى";
+
+/*English Key*/
+"En" = "انجليزى";
+"English" = "انجليزى";
+
+/*Choose Language Key*/
+"Choose Language" = "اختر اللغة";
+
+/*Error Key*/
+"Error" = "خطأ";
+
+/*Error Message Key*/
+"Sorry , The server is under maintenance, thanks for your patience." = "عفوا يوجد بعض الاصلاحات، شكرا لتفهم";
+
+/*Playing At Key*/
+"Playing in" = "يعرض في";
+
+/*Cinemas Key*/
+"cinemas" = "سينما";
+
+/*Cinema Key*/
+"cinemas" = "سينما";
+
+
+/*Notification Key*/
+"Notification" = "إشعار";
+
+/*Movie Key*/
+"Movie" = "فيلم";
+
+/*A Cinema Key*/
+"Cinema" = "سينما";
+
+/*Show Key*/
+"Show" = "عرض";
+
+/*Clear Key*/
+"Clear" = "مسح التحديد";
+
+/*Update Key*/
+"Update" = "تحديث";
+
+/*Done Key*/
+"Done" = "تم";
+
+/*Edit Key*/
+"Edit" = "تعديل";
+
+/*Rating Key*/
+"You already rated this movie" = "لقد قمت بتقييم هذا الفيلم بالفعل";
+
+/*Error Internet Connection*/
+"There is a problem in the connection, check your connection and try again" = "توجد مشكلة فى الاتصال بالانترنت، برجاء الاتصال بالانترنت و المحاولة لاحقا";
+
+/*Favorites Cinemas Key*/
+"You already added this cinema to your favorites" = "لقد قمت بالفعل بإضافة هذه السينما الى قائمتك المفضلة";
+
+/*Selection Key*/
+"Selection" = "اختر";
+
+/*Select Nav Key*/
+"Select Navigation App" = "اختر التطبيق";
+
+/*CountryKey*/
+"Country" = "الدولة";
+
+/*choose language key*/
+"CHOOSE LANGUAGE" = "إختر اللغة";
+
+/*choose country key*/
+"CHOOSE COUNTRY" = "إختر الدولة";
+
+/*continue Key*/
+"CONTINUE" = "إستمر";
+
+/*confirm key*/
+"CONFIRM" = "تأكيد";
+
+/*change in settings key*/
+"You can change this in app settings later" = "يمكنك تغيير اختياراتك من اعدادات التطبيق لاحقا";
+
+"Thank you" = "شكرا لك";
+"all" = "الكل";
+"LE" = "جنيه";
+"SAR" = "ر.س" ;
+
+"Cinema is added to favorites successfully" = "تمت اضافه السينما الي المفضلات بنجاح";
+
+"Cinema is removed from favorites" = "تمت ازاله السينما من المفضلات";
+"adsarea" = "مساحه إعلانيه" ;
