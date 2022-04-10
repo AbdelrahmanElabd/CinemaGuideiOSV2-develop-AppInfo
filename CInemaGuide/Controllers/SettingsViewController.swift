@@ -12,7 +12,7 @@ import AwesomeCache
 import UserNotifications
 import Netmera
 import GoogleMobileAds
-import Instabug
+//import Instabug
 
 class SettingsViewController: BaseViewController, UIGestureRecognizerDelegate, UIActionSheetDelegate {
 
@@ -228,7 +228,7 @@ class SettingsViewController: BaseViewController, UIGestureRecognizerDelegate, U
                 APIConstants.URLs.locale = "en"
                 CinemaGuideLangs.setAppleLAnguageTo(lang: "en")
                 genresCache["GenresArrayCache"] = NSMutableArray()
-                Instabug.setLocale(.english)
+//                Instabug.setLocale(.english)
 
                 //UI
                 //Flip UIView
@@ -259,7 +259,7 @@ class SettingsViewController: BaseViewController, UIGestureRecognizerDelegate, U
                 CinemaGuideLangs.setAppleLAnguageTo(lang: "ar")
                 UserDefaults.standard.set(1, forKey: "FirstChangeLang")
                 genresCache["GenresArrayCache"] = NSMutableArray()
-                Instabug.setLocale(.arabic)
+//                Instabug.setLocale(.arabic)
                 
                 //UI
                 //Flip UIView

@@ -13,7 +13,7 @@ import AwesomeCache
 //import SwiftWebVC
 //import SwiftImageSlider
 import GoogleMobileAds
-import Instabug
+//import Instabug
 import Toast_Swift
 import SafariServices
 
@@ -90,7 +90,7 @@ class MovieDetailsViewController: BaseViewController, UITableViewDelegate, UITab
     var isMPUEnabled = false
     var isInterestatialEnabled = false
     var isSponsorEnabled = false
-    
+    let dynamicView=UIView(frame: CGRect(x:0,y: 0, width:UIScreen.main.bounds.width, height:UIScreen.main.bounds.height))
     //MARK: - View life cycle functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -241,19 +241,77 @@ class MovieDetailsViewController: BaseViewController, UITableViewDelegate, UITab
                 
             }
         }) { (error: NSError?) -> Void in
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
 
             if error?.description == "The Internet connection appears to be offline." {
                 self.errorMessage = NSLocalizedString("No internet connection, check your connection and try again", comment: "No Internet Connection")
             } else {
                 self.errorMessage = NSLocalizedString("This movie will be available soon in cinemas", comment: "Movie Available Soon")
             }
-            self.movieDataTabelView.emptyDataSetDataSource = self
-            self.movieDataTabelView.emptyDataSetDelegate = self
-            self.movieDataTabelView.reloadData()
+            self.activityIndicatorView?.stopActivityIndicator()
+            
+            let width = UIScreen.main.bounds.width
+            
+            let label = UILabel(frame: CGRect(x:0,y: UIScreen.main.bounds.midY, width:width, height:20))
+            let tryaginBTN = UIButton(frame: CGRect(x:0,y: (UIScreen.main.bounds.midY + 40), width:width, height:20))
+            tryaginBTN.addTarget(self, action: #selector(self.loadAgain), for: .touchUpInside)
+               let emptyImage = UIImage(named: "NoDataIcon")
+               let emptyImageView = UIImageView(frame: CGRect(x:0,y: 80, width:width, height:120))
+               emptyImageView.image = emptyImage
+            emptyImageView.contentMode = .scaleAspectFit
+            self.dynamicView.addSubview(emptyImageView)
+            
+            let attributedString = NSMutableAttributedString(string: NSLocalizedString("No data found, please try again later", comment: ""))
+            let range = (self.errorMessage as NSString).range(of: "No data found, please try again later")
+            let font = UIFont(name: "SegoeUI-Bold", size: 16)
+            attributedString.addAttributes([NSAttributedString.Key.font : font!, NSAttributedString.Key.foregroundColor : UIColor.init(red: 30/255, green: 46/255, blue: 56/255, alpha: 1)], range: range)
+            label.text = attributedString.string
+            tryaginBTN.setTitle("Try again", for: .normal)
+            tryaginBTN.setTitleColor(.gray, for: .normal)
+            self.dynamicView.backgroundColor=UIColor.clear
+            label.textAlignment = .center
+            self.dynamicView.addSubview(label)
+            self.dynamicView.addSubview(tryaginBTN)
+            self.scrollView.addSubview(self.dynamicView)
+            
+            
+            
+           // self.movieDataTabelView.setEmptyMessage(self.errorMessage)
+//            self.contentView.isHidden = false
+//            let messsageAlertController = UIAlertController(title:NSLocalizedString("errorConnection", comment: "errorConnection"), message: "error Connection", preferredStyle: .alert)
+//            let settingAlertAction = UIAlertAction(title: NSLocalizedString("Setting", comment: "Setting") , style: .default) { _ in
+//
+//                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+//                            return
+//                        }
+//
+//                        if UIApplication.shared.canOpenURL(settingsUrl) {
+//                            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+//                                print("Settings opened: \(success)") // Prints true
+//                            })
+//                        }
+//            }
+//            let retryAlertAction = UIAlertAction(title: NSLocalizedString("retry", comment: "Retry") , style: .default) { _ in
+//                self.getMovieDetails(movieID: movieID)
+//
+//            }
+//            messsageAlertController.addAction(settingAlertAction)
+//            messsageAlertController.addAction(retryAlertAction)
+//            self.present(messsageAlertController, animated: true);
+            
+//            self.movieDataTabelView.emptyDataSetDataSource = self
+//            self.movieDataTabelView.emptyDataSetDelegate = self
+//            self.movieDataTabelView.reloadData()
+//
+            
         }
     }
     
+    @objc func loadAgain()  {
+        self.dynamicView.removeFromSuperview()
+        self.getMovieDetails(movieID: selectedMovieID)
+        getMovieRate(movieID: selectedMovieID)
+    }
     func getMovieRate(movieID: Int)  {
         APIManager.getMovieRate(movieID: movieID, success: { (movieRate: [String: Any]) -> Void in
             self.apiRating = (movieRate["movieRate"] as? String)!
@@ -262,8 +320,8 @@ class MovieDetailsViewController: BaseViewController, UITableViewDelegate, UITab
             }
         
         }) { (error: NSError?) in
-            Instabug.ibgLog(error?.description ?? "")
-
+//            Instabug.ibgLog(error?.description ?? "")
+             
             print(error?.description ?? "")
         }
     }
@@ -893,9 +951,9 @@ class MovieDetailsViewController: BaseViewController, UITableViewDelegate, UITab
                     print(ResponseObject["Success"] ?? "")
                     thankYouAlert()
                 }, failure: { (error: NSError?) -> Void in
-                    Instabug.ibgLog(error?.description ?? "")
+//                    Instabug.ibgLog(error?.description ?? "")
 
-                    Instabug.ibgLog(error?.description ?? "")
+//                    Instabug.ibgLog(error?.description ?? "")
                     print(error?.description ?? "")
                 })
             }
@@ -911,7 +969,7 @@ class MovieDetailsViewController: BaseViewController, UITableViewDelegate, UITab
                 print(ResponseObject["Success"] ?? "")
                 thankYouAlert()
             }, failure: { (error: NSError?) -> Void in
-                Instabug.ibgLog(error?.description ?? "")
+//                Instabug.ibgLog(error?.description ?? "")
                 print(error?.description ?? "")
             })
         }
@@ -997,3 +1055,18 @@ class MovieDetailsViewController: BaseViewController, UITableViewDelegate, UITab
 
     
 }
+
+extension UITableView {
+func setEmptyMessage(_ message: String) {
+    
+    let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+    messageLabel.text = message
+    messageLabel.textColor = .black
+    messageLabel.numberOfLines = 0;
+    messageLabel.textAlignment = .center;
+    messageLabel.font = UIFont.systemFont(ofSize: 14.0, weight: UIFont.Weight.medium)
+    messageLabel.sizeToFit()
+
+    self.backgroundView = messageLabel;
+    self.separatorStyle = .none;
+}}

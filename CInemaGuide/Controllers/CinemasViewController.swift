@@ -12,7 +12,7 @@ import TBEmptyDataSet
 import CustomizableActionSheet
 import AwesomeCache
 import GoogleMobileAds
-import Instabug
+//import Instabug
 import Toast_Swift
 
 struct FilterItem {
@@ -299,7 +299,7 @@ class CinemasViewController: BaseViewController, UICollectionViewDelegate, UICol
             }
         }) { (error: NSError?) -> Void in
             self.activityIndicatorView?.stopActivityIndicator()
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
             self.activityIndicatorView?.removeFromSuperview()
             if error?.description == "The Internet connection appears to be offline." {
                 self.errorMessage = NSLocalizedString("No internet connection, check your connection and try again", comment: "No Internet Connection")
@@ -320,7 +320,7 @@ class CinemasViewController: BaseViewController, UICollectionViewDelegate, UICol
             self.priceRangesArray = movieFilterModel.priceRanges
             self.priceRangesCache["PriceRangesArrayCache"] = NSMutableArray(array: self.priceRangesArray)
         }) { (error: NSError?) -> Void in
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
             print(error?.description ?? "")
         }
     }

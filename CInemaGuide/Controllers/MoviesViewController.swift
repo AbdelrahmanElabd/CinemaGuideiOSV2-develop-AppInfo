@@ -11,7 +11,7 @@ import TBEmptyDataSet
 import CustomizableActionSheet
 import AwesomeCache
 import GoogleMobileAds
-import Instabug
+//import Instabug
 import Toast_Swift
 class MoviesViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, TBEmptyDataSetDelegate, TBEmptyDataSetDataSource, UIGestureRecognizerDelegate, UISearchBarDelegate {
     
@@ -348,7 +348,7 @@ class MoviesViewController: BaseViewController, UITableViewDelegate, UITableView
             self.moviesTableView.isHidden = false
             self.moviesSearchBar.isHidden = false
             self.moviesTableView.reloadData()
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
             
         }
     }
@@ -360,7 +360,7 @@ class MoviesViewController: BaseViewController, UITableViewDelegate, UITableView
             self.pgsArray = movieFilterModel.pgs
         }) { (error: NSError?) -> Void in
             print(error?.description ?? "")
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
         }
     }
     //MARK: - Collection view functions

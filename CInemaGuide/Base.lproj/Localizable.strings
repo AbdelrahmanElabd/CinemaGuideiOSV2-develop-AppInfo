@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   CInemaGuide
 
@@ -13,4 +13,8 @@
 "Cancel" = "Cancel";
 "OK" = "OK";
 "CHOOSE LANGUAGE" = "CHOOSE LANGUAGE" ;
-"adsarea" = "Ads Area" ;
+"errorConnection" = "Error Connection" ;
+"Setting" = "Setting";
+"retry" = "Retry" ;
+
+"No data found, please try again later" = "No internet Connection , please try again ";

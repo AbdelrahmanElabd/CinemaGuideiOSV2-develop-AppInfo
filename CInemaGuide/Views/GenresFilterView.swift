@@ -8,7 +8,7 @@
 
 import UIKit
 import AwesomeCache
-import Instabug
+//import Instabug
 @objc protocol GenresFilterDelegate {
     func okPressed(genresIDs: [Int])
     func cancelPressed(buttonType: String)
@@ -77,7 +77,7 @@ class GenresFilterView: UIView, UITableViewDelegate, UITableViewDataSource {
             self.genresTableView.isHidden = false
             }
             }) { (error: NSError?) -> Void in
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
             print(error?.description ?? "")
         }
     }

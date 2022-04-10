@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Instabug
+//import Instabug
 @objc protocol ChangeUserCountryDelegate {
     func changeCountryOkPressed(selectedCountry: String)
     func changeCountryCancelPressed()
@@ -49,7 +49,7 @@ class ChangeCountryView: UIView, UITableViewDelegate, UITableViewDataSource {
             self.countriesTableView.reloadData()
             self.activityView.stopAnimating()
         }) { (error: NSError?) -> Void in
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
             self.getCountries()
         }
     }

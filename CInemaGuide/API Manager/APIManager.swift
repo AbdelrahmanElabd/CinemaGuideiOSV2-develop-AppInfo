@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import AwesomeCache
-import Instabug
+//import Instabug
 class APIConstants {
     //MARK: - App constants
     struct URLs {

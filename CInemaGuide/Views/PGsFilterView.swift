@@ -8,7 +8,7 @@
 
 import UIKit
 import AwesomeCache
-import Instabug
+//import Instabug
 @objc protocol PGsFilterDelegate {
     func pgOkPressed(selectedIndex: Int)
     func pgCancelPressed()
@@ -62,7 +62,7 @@ class PGsFilterView: UIView, UITableViewDelegate, UITableViewDataSource {
             self.pgsTableView.reloadData()
             self.pgsTableView.isHidden = false
         }) { (error: NSError?) -> Void in
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
             print(error?.description ?? "")
         }
     }

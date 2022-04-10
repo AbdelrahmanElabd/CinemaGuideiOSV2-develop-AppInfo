@@ -103,12 +103,6 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.4.0):
     - GoogleUtilities/Logger
-  - Instabug (7.8):
-    - Instabug/Instabug (= 7.8)
-    - Instabug/InstabugCore (= 7.8)
-  - Instabug/Instabug (7.8):
-    - Instabug/InstabugCore
-  - Instabug/InstabugCore (7.8)
   - Kingfisher (4.10.1)
   - M13Checkbox (3.4.0)
   - MBProgressHUD (0.9.2)
@@ -168,7 +162,6 @@ DEPENDENCIES:
   - Firebase/Crashlytics
   - Google-Mobile-Ads-SDK
   - GoogleAnalytics
-  - Instabug
   - Kingfisher
   - M13Checkbox
   - MWPhotoBrowser
@@ -202,7 +195,6 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUserMessagingPlatform
     - GoogleUtilities
-    - Instabug
     - Kingfisher
     - M13Checkbox
     - MBProgressHUD
@@ -239,7 +231,6 @@ SPEC CHECKSUMS:
   GoogleDataTransport: cd9db2180fcecd8da1b561aea31e3e56cf834aa7
   GoogleUserMessagingPlatform: ab890ce5f6620f293a21b6bdd82e416a2c73aeca
   GoogleUtilities: 284cddc7fffc14ae1907efb6f78ab95c1fccaedc
-  Instabug: 51b8f0502289c3ec3e2e66672a988d3fe6ab563a
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
@@ -257,6 +248,6 @@ SPEC CHECKSUMS:
   TBEmptyDataSet: 349add79095bf66d0d11ef9464edd1a8cf5354b5
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 2c645324a613639c19b576776f887a3a070fb411
+PODFILE CHECKSUM: 59f7d45ef8b01d8f8df6655e4478155eb1de0213
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3

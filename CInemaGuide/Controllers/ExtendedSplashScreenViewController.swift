@@ -8,10 +8,9 @@
 
 import UIKit
 import Kingfisher
-import Instabug
-import GoogleMobileAds
+//import Instabug
 @available(iOS 13.0, *)
-class ExtendedSplashScreenViewController: UIViewController, UIGestureRecognizerDelegate , GADFullScreenContentDelegate {
+class ExtendedSplashScreenViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var cinemaLogoImage: UIImageView!
@@ -29,8 +28,8 @@ class ExtendedSplashScreenViewController: UIViewController, UIGestureRecognizerD
     override func viewDidLoad() {
          super.viewDidLoad()
         
-        self.initSplachViewController()
-        self.setupIntersitalAd()
+       // self.initSplachViewController()
+        
 //        if UserDefaults.standard.bool(forKey: "defaultCountryAndLanguage"){
 //            self.initSplachViewController()
 //        }
@@ -200,43 +199,55 @@ class ExtendedSplashScreenViewController: UIViewController, UIGestureRecognizerD
                 self.present(alert, animated: true, completion: nil)
             }
         }) { (error: NSError?) in
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
             print(error?.description ?? "unkown error")
             var errorMessage = ""
             if error?.code == -1009 {
                 errorMessage = NSLocalizedString("No internet connection, check your connection and try again", comment: "No Internet Connection")
             } else if error?.code == -1001 {
                 errorMessage = NSLocalizedString("There is a problem in the connection, check your connection and try again", comment: "Error Internet Connection")
-            } else {
+            }
+            else if error?.code == -1020{
+                errorMessage = NSLocalizedString("There is a problem in the connection, check your connection and try again", comment: "Error Internet Connection ")
+            }
+            else {
                 errorMessage = NSLocalizedString("Sorry , The server is under maintenance, thanks for your patience.", comment: "Error Message Key")
             }
-            let alert = UIAlertController(title: NSLocalizedString("Error", comment: "Error Key"), message: errorMessage, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel Key"), style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            
+            let messsageAlertController = UIAlertController(title:NSLocalizedString("errorConnection", comment: "errorConnection"), message: errorMessage, preferredStyle: .alert)
+            let settingAlertAction = UIAlertAction(title: NSLocalizedString("Setting", comment: "Setting") , style: .default) { _ in
+                
+                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                            return
+                        }
+
+                        if UIApplication.shared.canOpenURL(settingsUrl) {
+                            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                                print("Settings opened: \(success)") // Prints true
+                            })
+                        }
+            }
+            let retryAlertAction = UIAlertAction(title: NSLocalizedString("retry", comment: "Retry") , style: .default) { _ in
+                self.initSplachViewController()
+               
+            }
+            messsageAlertController.addAction(settingAlertAction)
+            messsageAlertController.addAction(retryAlertAction)
+            self.present(messsageAlertController, animated: true);
+//            let alert = UIAlertController(title: NSLocalizedString("Error", comment: "Error Key"), message: errorMessage, preferredStyle: UIAlertController.Style.alert)
+//            alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel Key"), style: UIAlertAction.Style.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
             
         }
-    }
-    func setupIntersitalAd() {
-        Helper.interstitial = GAMInterstitialAd()
-        Helper.interstitial.fullScreenContentDelegate = self
-        let request = GAMRequest()
-//        Helper.interstitial.load(request)
         
-        GAMInterstitialAd.load(withAdManagerAdUnitID: "/7524/Mobile-FilBalad.com/New-Cinema-Guide-Interstitial", request: request) { (ads, error) in
-            if (error != nil){
-                Helper.currentAdIndex = 0
-                print(error.debugDescription)
-            }
-            else{
-                Helper.interstitial = ads;
-            }
-        }
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.initSplachViewController()
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     

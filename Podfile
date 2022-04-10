@@ -40,7 +40,7 @@ def pods
     
      pod 'Netmera'
     
-    pod 'Instabug'
+#    pod 'Instabug'
 end
 
 target 'CInemaGuide' do
@@ -74,5 +74,3 @@ end
 
 
 
-- update : Google Mobile Ads SDKS to latest version #25788 <Finish> .- add : add pop the tracking Usage Description <Finish> .- add : MMP-Banner-GAMD-ios-mediation #26041 <finish> .- fixed : interstitial popup time is missing #26000 <finish> .
-#end

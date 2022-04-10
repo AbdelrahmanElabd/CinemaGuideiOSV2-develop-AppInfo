@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 //import Fabric
 //import Crashlytics
-import Instabug
+//import Instabug
 import StoreKit
 import AwesomeCache
 import Firebase
@@ -89,12 +89,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
 //        Fabric.with([Crashlytics.self])
         
-        if CinemaGuideLangs.currentAppleLanguage() == "ar" {
-            Instabug.setLocale(.arabic)
-        } else {
-            Instabug.setLocale(.english)
-        }
-        Instabug.start(withToken: "0078ee512f216a4c8817790221e84ed6", invocationEvent: .shake)
+//        if CinemaGuideLangs.currentAppleLanguage() == "ar" {
+//            Instabug.setLocale(.arabic)
+//        } else {
+//            Instabug.setLocale(.english)
+//        }
+//        Instabug.start(withToken: "0078ee512f216a4c8817790221e84ed6", invocationEvent: .shake)
         
         //Effective Measure
         //let traker = EmTracker()
@@ -288,8 +288,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             user.country = "eg"
         }
         
-        Instabug.ibgLog(token)
-        Instabug.ibgLog(user.country ?? "")
+//        Instabug.ibgLog(token)
+//        Instabug.ibgLog(user.country ?? "")
         Netmera.update(user)
     }
     

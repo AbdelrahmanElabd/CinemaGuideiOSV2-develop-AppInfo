@@ -14,7 +14,7 @@ import GoogleMobileAds
 import Kingfisher
 //import PullToRefreshSwift
 import PullToRefresh
-import Instabug
+//import Instabug
 import Firebase
 import Toast_Swift
 
@@ -352,7 +352,7 @@ class HomeViewController:BaseViewController, UITableViewDelegate, UITableViewDat
             } else {
                 self.errorMessage = NSLocalizedString("No data found, please try again later", comment: "No Data Found")
             }
-            Instabug.ibgLog(error?.description ?? "")
+            //Instabug.ibgLog(error?.description ?? "")
 
             self.HomeTableView.emptyDataSetDelegate = self
             self.HomeTableView.emptyDataSetDataSource = self

@@ -12,7 +12,7 @@ import TBEmptyDataSet
 import CoreLocation
 import MapKit
 import GoogleMobileAds
-import Instabug
+//import Instabug
 import Toast_Swift
 class CinemaDetailsViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate {
 
@@ -44,6 +44,7 @@ class CinemaDetailsViewController: BaseViewController, UITableViewDelegate, UITa
     var isMPUEnabled = false
     var isInterestatialEnabled = false
     var isSponsorEnabled = false
+    let dynamicView=UIView(frame: CGRect(x:0,y: 0, width:UIScreen.main.bounds.width, height:UIScreen.main.bounds.height))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -188,7 +189,7 @@ class CinemaDetailsViewController: BaseViewController, UITableViewDelegate, UITa
         appDelegate.isUniversalLink=false
         NotificationCenter.default.removeObserver(self)
     }
-    func getCinemaDetails(cinemaID: Int) {
+    @objc func getCinemaDetails(cinemaID: Int) {
         activityIndicatorView?.startActivityIndicator()
         APIManager.getCinemaDetails(cinemaID: cinemaID, success: { (cinema: CinemaModel) -> Void in
             if cinema.id != 0{
@@ -202,16 +203,46 @@ class CinemaDetailsViewController: BaseViewController, UITableViewDelegate, UITa
             }
             }
             else{
-                let alert = UIAlertController(title: "", message:NSLocalizedString("No data found, please try again later", comment: "No Data Found") , preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel Key"), style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+//                let alert = UIAlertController(title: "", message:NSLocalizedString("No data found, please try again later", comment: "No Data Found") , preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel Key"), style: UIAlertAction.Style.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
                 DispatchQueue.main.async {
                     self.activityIndicatorView?.stopActivityIndicator()
+                    self.getCinemaDetails(cinemaID: self.selectedCinemaID)
+                    
                 }
             }
         }) { (error: NSError?) -> Void in
             print(error?.description ?? "")
-            Instabug.ibgLog(error?.description ?? "")
+            
+            self.activityIndicatorView?.stopActivityIndicator()
+            
+            let width = UIScreen.main.bounds.width
+            
+            let label = UILabel(frame: CGRect(x:0,y: UIScreen.main.bounds.midY, width:width, height:20))
+            let tryaginBTN = UIButton(frame: CGRect(x:0,y: (UIScreen.main.bounds.midY + 40), width:width, height:20))
+            tryaginBTN.addTarget(self, action: #selector(self.loadAgain), for: .touchUpInside)
+               let emptyImage = UIImage(named: "NoDataIcon")
+               let emptyImageView = UIImageView(frame: CGRect(x:0,y: 160, width:width, height:120))
+               emptyImageView.image = emptyImage
+            emptyImageView.contentMode = .scaleAspectFit
+            self.dynamicView.addSubview(emptyImageView)
+            
+            let attributedString = NSMutableAttributedString(string: NSLocalizedString("No data found, please try again later", comment: ""))
+            let range = (self.errorMessage as NSString).range(of: "No internet connection, please try again later")
+            let font = UIFont(name: "SegoeUI-Bold", size: 16)
+            attributedString.addAttributes([NSAttributedString.Key.font : font!, NSAttributedString.Key.foregroundColor : UIColor.init(red: 30/255, green: 46/255, blue: 56/255, alpha: 1)], range: range)
+            label.text = attributedString.string
+            tryaginBTN.setTitle("Try again", for: .normal)
+            tryaginBTN.setTitleColor(.gray, for: .normal)
+            self.dynamicView.backgroundColor=UIColor.clear
+            label.textAlignment = .center
+            self.dynamicView.addSubview(label)
+            self.dynamicView.addSubview(tryaginBTN)
+            self.view.addSubview(self.dynamicView)
+            self.getCinemaDetails(cinemaID: self.selectedCinemaID)
+            
+//            Instabug.ibgLog(error?.description ?? "")
 
         }
     }
@@ -220,7 +251,10 @@ class CinemaDetailsViewController: BaseViewController, UITableViewDelegate, UITa
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @objc func loadAgain()  {
+        self.dynamicView.removeFromSuperview()
+        self.getCinemaDetails(cinemaID: self.selectedCinemaID)
+    }
     //MARK: - Table view functions
     func numberOfSections(in tableView: UITableView) -> Int {
         if cinemaData != nil {
@@ -262,13 +296,12 @@ class CinemaDetailsViewController: BaseViewController, UITableViewDelegate, UITa
             return cinemaDetailsHeaderCell
         } else if indexPath.section == 1 {
             let mediumRectAdCell = tableView.dequeueReusableCell(withIdentifier: "MediumRectCell", for: indexPath) as! MediumRectTableViewCell
-            mediumRectAdCell.adSpaceLabel.text = NSLocalizedString("adsarea", comment: "")
             if isMPUEnabled {
                 mediumRectAdCell.mediumRectView.rootViewController = self
                 mediumRectAdCell.initCellWith(adUnitID: "/7524/Mobile-FilBalad.com/Cinema-Guide-MPU")
             } else {
                 mediumRectAdCell.adSpaceLabel.isHidden = true
-            } 
+            }
             return mediumRectAdCell
         } else {
             let movieCell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as! MovieTableViewCell

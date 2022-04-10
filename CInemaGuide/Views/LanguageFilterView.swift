@@ -8,7 +8,7 @@
 
 import UIKit
 import AwesomeCache
-import Instabug
+//import Instabug
 @objc protocol LanguageFilterDelegate {
     func okPressed(selectedIndex: Int, isAr: Bool)
     func cancelPressed()
@@ -65,7 +65,7 @@ class LanguageFilterView: UIView, UITableViewDelegate, UITableViewDataSource {
             self.languagesTableView.reloadData()
             self.languagesTableView.isHidden = false
         }) { (error: NSError?) -> Void in
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
             print(error?.description ?? "")
         }
     }

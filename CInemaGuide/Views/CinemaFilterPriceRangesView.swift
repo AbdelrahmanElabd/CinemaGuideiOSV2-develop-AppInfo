@@ -8,7 +8,7 @@
 
 import UIKit
 import AwesomeCache
-import Instabug
+//import Instabug
 @objc protocol PriceRangesFilterDelegate {
     func priceRangesOkPressed(selectedRange: Int)
     func priceRangesCancelPressed()
@@ -60,7 +60,7 @@ class CinemaFilterPriceRangesView: UIView, UITableViewDelegate, UITableViewDataS
             self.priceRangesTableView.reloadData()
             self.priceRangesTableView.isHidden = false
         }) { (error: NSError?) -> Void in
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
             print(error?.description ?? "")
         }
     }

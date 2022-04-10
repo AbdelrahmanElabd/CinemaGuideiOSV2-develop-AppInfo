@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Instabug
+//import Instabug
 class LanguageAndCountriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Properties
@@ -57,7 +57,7 @@ class LanguageAndCountriesViewController: UIViewController, UITableViewDelegate,
             }
         }) { (error: NSError?) -> Void in
             self.getCountries()
-            Instabug.ibgLog(error?.description ?? "")
+//            Instabug.ibgLog(error?.description ?? "")
         }
     }
     

@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   CInemaGuide
 
@@ -30,11 +30,15 @@
 
 /*No Data Found*/
 //"No data found, please try again later" = "حدث خطأ فى الحصول على البيانات برجاء المحاولة لاحقا";
-"No data found, please try again later" = "لا يوجد بيانات برجاء المحاولة لاحقا";
+"No data found, please try again later" = "لا يوجد اتصال بالانترنت ";
 "No data found" = "لا يوجد بيانات";
 
 /*No Internet Connection*/
-"No internet connection, check your connection and try again" = "لا يوجد اتصال بالانترنت برجاء الاتصال بالانترنت و المحاولة لاحقا";
+"No internet connection, check your connection and try again" = "قم بتشغيل البيانات الخلوية أو قم باستخدام Wi-Fi للوصول الي البيانات ";
+"errorConnection" = "تم إيقاف البيانات الخلوية" ;
+"Setting" = "الإعدادت" ;
+"retry" = "إعاده المحاوله" ;
+
 
 /*Try Again*/
 "\n Try again" = "\n اعادة المحاولة";
@@ -168,4 +172,3 @@
 "Cinema is added to favorites successfully" = "تمت اضافه السينما الي المفضلات بنجاح";
 
 "Cinema is removed from favorites" = "تمت ازاله السينما من المفضلات";
-"adsarea" = "مساحه إعلانيه" ;
